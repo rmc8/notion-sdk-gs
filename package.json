@@ -17,7 +17,8 @@
     "url": "https://github.com/rmc8/notion-sdk-gs/issues"
   },
   "homepage": "https://github.com/rmc8/notion-sdk-gs#readme",
-  "dependencies": {
-    "eslint": "^7.29.0"
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-google": "^0.14.0"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "name": "notion-sdk-gs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix \"src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmc8/notion-sdk-gs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmc8/notion-sdk-gs/issues"
+  },
+  "homepage": "https://github.com/rmc8/notion-sdk-gs#readme",
+  "dependencies": {
+    "eslint": "^7.29.0"
+  }
+}

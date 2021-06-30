@@ -1,0 +1,22 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.1
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/node:15.1
+    steps:
+      - checkout
+      - run:
+          name: npm version
+          command: npm -v
+      - run:
+          name: install npm
+          command: npm install
+      - run:
+          name: ESlint
+          command: npm run lint
+workflows:
+  sample:
+    jobs:
+      - build-and-test

@@ -55,6 +55,7 @@ class DatabasesEndpoint {
 class BlocksChildrenEndpoint {
   constructor(parent) {
     this.parent = parent;
+    this.base_url = parent.base_url;
     this.path = "blocks";
     this.child = "children";
   }
@@ -77,6 +78,6 @@ class BlocksChildrenEndpoint {
 class BlocksEndpoint {
   constructor(parent) {
     this.request = parent.request;
-    this.children = new BlocksChildrenEndpoint(this);
+    this.children = new BlocksChildrenEndpoint(parent);
   }
 }

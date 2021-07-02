@@ -21,8 +21,6 @@ class Client {
     if (!isNullOrUndefined(params)) {
       options["payload"] = JSON.stringify(params);
     }
-    console.log(url);
-    console.log(options);
     var res = UrlFetchApp.fetch(url, options);
     if (res.getResponseCode() == 200) {
       return JSON.parse(res.getContentText());
@@ -30,9 +28,4 @@ class Client {
   }
 }
 
-function main() {
-  var props = PropertiesService.getScriptProperties();
-  const notion = new Client(props.getProperty("NOTION_TOKEN"));
-  var ret = notion.search({ query: "My" });
-  console.log(ret);
-}
+this.client = Client

@@ -22,7 +22,8 @@ class Client {
       options["payload"] = JSON.stringify(params);
     }
     var res = UrlFetchApp.fetch(url, options);
-    if (res.getResponseCode() == 200) {
+    var resCode = res.getResponseCode();
+    if (300 > resCode && resCode >= 200) {
       return JSON.parse(res.getContentText());
     }
   }
